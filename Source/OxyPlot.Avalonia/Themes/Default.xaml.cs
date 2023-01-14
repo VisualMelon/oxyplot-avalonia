@@ -3,7 +3,7 @@ using Avalonia.Styling;
 
 namespace OxyPlot.Avalonia.Themes
 {
-    class Default : Styles
+    public class Default : Styles
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Default"/> class.

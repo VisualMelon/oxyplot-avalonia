@@ -12,9 +12,9 @@
     </AvaloniaResource>
   </ItemGroup>
   <ItemGroup>
-	<PackageReference Include="Avalonia.Desktop" Version="11.0.0-preview2" />
-	<PackageReference Include="Avalonia.Diagnostics" Version="11.0.0-preview2" />
-	<PackageReference Include="Avalonia.Themes.Simple" Version="11.0.0-preview2" />
+	<PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)" />
+	<PackageReference Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
+	<PackageReference Include="Avalonia.Themes.Simple" Version="$(AvaloniaVersion)" />
     <PackageReference Include="OxyPlot.Core" Version="2.1.0" />
     <PackageReference Include="OxyPlot.ExampleLibrary" Version="2.1.0" />
   </ItemGroup>

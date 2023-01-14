@@ -1,8 +1,9 @@
 ﻿<Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:oxythemes="clr-namespace:OxyPlot.Avalonia.Themes;assembly=OxyPlot.Avalonia"
              x:Class="ExampleBrowser.App">
   <Application.Styles>
 	<SimpleTheme />
-    <StyleInclude Source="resm:OxyPlot.Avalonia.Themes.Default.xaml?assembly=OxyPlot.Avalonia"/>
+	<oxythemes:Default />
   </Application.Styles>
 </Application>

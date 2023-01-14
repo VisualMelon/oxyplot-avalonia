@@ -26,7 +26,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryTest", "Examples\Aval
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvaloniaExamples", "Examples\Avalonia\AvaloniaExamples\AvaloniaExamples.csproj", "{B86739B8-5DE9-406F-9418-0751BF7C166F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleBrowser", "Examples\Avalonia\ExampleBrowser\ExampleBrowser.csproj", "{E4993D0B-C4C6-47CE-A55E-19EFB28EC034}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleBrowser", "Examples\Avalonia\ExampleBrowser\ExampleBrowser.csproj", "{E4993D0B-C4C6-47CE-A55E-19EFB28EC034}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F0907A13-A83D-4FC6-8940-39D64F60AA09}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
