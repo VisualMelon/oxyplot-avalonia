@@ -30,7 +30,7 @@
                 <Expander.Header>
                   <TextBlock Text="{Binding Key}" DockPanel.Dock="Top" Margin="0" />
                 </Expander.Header>
-                <ListBox Items="{Binding Examples}" SelectedItem="{Binding $parent[Grid].DataContext.Example}" VirtualizationMode="None" Margin="0" Padding="0">
+                <ListBox Items="{Binding Examples}" SelectedItem="{Binding $parent[Grid].DataContext.Example}" Margin="0" Padding="0">
                   <ListBox.DataTemplates>
                     <DataTemplate DataType="exampleLibrary:ExampleInfo">
                       <TextBlock Text="{Binding Title}" />

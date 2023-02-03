@@ -136,7 +136,7 @@ namespace OxyPlot.Avalonia
         {
             base.SynchronizeProperties();
             var axis = InternalAxis as Axes.LinearColorAxis;
-            Contract.Requires<InvalidOperationException>(axis != null);
+            //Contract.Requires<InvalidOperationException>(axis != null);
             if (GradientStops != null)
             {
                 axis.Palette = GradientStops.Count > 2

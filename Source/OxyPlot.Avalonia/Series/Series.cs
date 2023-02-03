@@ -227,16 +227,27 @@ namespace OxyPlot.Avalonia
             (this.Parent as IPlot)?.ElementDataChanged(this);
         }
 
-        /// <summary>
-        /// The on items source changed.
-        /// </summary>
-        /// <param name="e">Event args</param>
-        protected override void ItemsChanged(AvaloniaPropertyChangedEventArgs e)
+        protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs e)
         {
-            base.ItemsChanged(e);
-            SubscribeToCollectionChanged(e.OldValue as IEnumerable, e.NewValue as IEnumerable);
-            OnDataChanged();
+            base.OnPropertyChanged(e);
+
+            if (e.Property == ItemsControl.ItemsProperty)
+            {
+                SubscribeToCollectionChanged(e.OldValue as IEnumerable, e.NewValue as IEnumerable);
+                OnDataChanged();
+            }
         }
+
+        ///// <summary>
+        ///// The on items source changed.
+        ///// </summary>
+        ///// <param name="e">Event args</param>
+        //protected override void ItemsCollectionChanged(AvaloniaPropertyChangedEventArgs e)
+        //{
+        //    base.ItemsChanged(e);
+        //    SubscribeToCollectionChanged(e.OldValue as IEnumerable, e.NewValue as IEnumerable);
+        //    OnDataChanged();
+        //}
 
         protected override void OnAttachedToLogicalTree(global::Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs e)
         {
