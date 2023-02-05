@@ -239,7 +239,6 @@ namespace OxyPlot.Avalonia
             {
                 if (Interlocked.CompareExchange(ref isUpdateRequired, updateState, currentState) == currentState)
                 {
-                    isUpdateRequired = updateState;
                     BeginInvoke(() => UpdateModel(updateData));
                     break;
                 }
@@ -396,6 +395,7 @@ namespace OxyPlot.Avalonia
         {
             if (Width <= 0 || Height <= 0 || ActualModel == null)
             {
+                isUpdateRequired = 0;
                 return;
             }
 
@@ -405,7 +405,7 @@ namespace OxyPlot.Avalonia
 
                 if (updateState > 0)
                 {
-                    ((IPlotModel)ActualModel).Update(updateState == 2);
+                    ((IPlotModel)ActualModel).Update(updateState == 2 || updateData);
                 }
             }
 
@@ -415,7 +415,6 @@ namespace OxyPlot.Avalonia
                 // After the invalidation, the element will have its layout updated,
                 // which will occur asynchronously unless subsequently forced by UpdateLayout.
                 BeginInvoke(InvalidateArrange);
-                BeginInvoke(InvalidateVisual);
             }
 
         }
