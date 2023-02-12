@@ -13,10 +13,21 @@
     </AvaloniaResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Remove="Examples\FlyoutDemo\MainWindow.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Examples\FlyoutDemo\MainWindow.xaml" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="JetBrains.Annotations" Version="11.0.0" />
     <ProjectReference Include="..\..\..\OxyPlot.Avalonia\OxyPlot.Avalonia.csproj" />
     <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)" />
     <PackageReference Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
     <PackageReference Include="Avalonia.Themes.Simple" Version="$(AvaloniaVersion)" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Update="Examples\FlyoutDemo\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </AvaloniaResource>
   </ItemGroup>
 </Project>
