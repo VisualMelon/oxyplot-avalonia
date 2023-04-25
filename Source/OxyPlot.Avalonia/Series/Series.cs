@@ -78,10 +78,6 @@ namespace OxyPlot.Avalonia
         protected Series()
         {
             eventListener = new EventListener(OnCollectionChanged);
-
-            // Set Items to null for consistency with WPF behaviour in Oxyplot-Contrib
-            // Works around issue with BarSeriesManager throwing on empty Items collection in OxyPlot.Core 2.1
-            Items = null;
         }
 
         /// <summary>
@@ -235,7 +231,7 @@ namespace OxyPlot.Avalonia
         {
             base.OnPropertyChanged(e);
 
-            if (e.Property == ItemsControl.ItemsProperty)
+            if (e.Property == ItemsControl.ItemsSourceProperty)
             {
                 SubscribeToCollectionChanged(e.OldValue as IEnumerable, e.NewValue as IEnumerable);
                 OnDataChanged();

@@ -329,14 +329,14 @@ namespace OxyPlot.Avalonia
                 return;
             }
 
-            var tracker = trackerTemplate.Build(new ContentControl());
+            var tracker = trackerTemplate.Build(new ContentControl()).Result;
 
             // ReSharper disable once RedundantNameQualifier
             if (!object.ReferenceEquals(tracker, currentTracker))
             {
                 HideTracker();
-                overlays.Children.Add(tracker.Control);
-                currentTracker = tracker.Control;
+                overlays.Children.Add(tracker);
+                currentTracker = tracker;
             }
 
             if (currentTracker != null)
