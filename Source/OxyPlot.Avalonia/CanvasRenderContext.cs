@@ -808,7 +808,7 @@ namespace OxyPlot.Avalonia
             }
             else
             {
-                RenderOptions.SetBitmapInterpolationMode(image, BitmapInterpolationMode.Default);
+                RenderOptions.SetBitmapInterpolationMode(image, BitmapInterpolationMode.None);
             }
         }
 
