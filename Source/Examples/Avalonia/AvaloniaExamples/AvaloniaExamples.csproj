@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
   </PropertyGroup> 
   <ItemGroup>
-    <AvaloniaResource Include="Images\*"/>
+    <AvaloniaResource Include="Images\*" />
     <PackageReference Include="JetBrains.Annotations" Version="11.0.0" />
     <ProjectReference Include="..\..\..\OxyPlot.Avalonia\OxyPlot.Avalonia.csproj" />
     <PackageReference Include="Avalonia.Desktop" Version="11.0.0-rc1.1" />
