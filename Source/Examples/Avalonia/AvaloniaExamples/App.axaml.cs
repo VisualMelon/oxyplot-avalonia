@@ -41,7 +41,7 @@ namespace AvaloniaExamples
         public static void AttachDevTools(Window window)
         {
 #if DEBUG
-			DevToolsExtensions.AttachDevTools(window);
+            // TODO: consider AvaloniaUI.DiagnosticsSupport
 #endif
 		}
     }

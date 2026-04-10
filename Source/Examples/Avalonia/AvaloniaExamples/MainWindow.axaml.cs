@@ -35,7 +35,6 @@ namespace AvaloniaExamples
             InitializeComponent();
             ListBox.ItemsSource = this.Examples = this.GetExamples(this.GetType().Assembly).OrderBy(e => e.Title).ToArray();
             this.DataContext = this;
-			DevToolsExtensions.AttachDevTools(this);
 		}
 
         private void InitializeComponent()

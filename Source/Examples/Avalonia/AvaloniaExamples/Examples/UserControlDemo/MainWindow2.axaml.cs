@@ -23,7 +23,7 @@ namespace AvaloniaExamples.Examples.UserControlDemo
         public MainWindow2()
         {
             this.InitializeComponent();
-            this.DataContext = new { Models = new List<ViewModel> { new ViewModel { Title = "Plot1" }, new ViewModel { Title = "Plot2" } } };
+            this.DataContext = new Context2(new List<ViewModel> { new ViewModel { Title = "Plot1" }, new ViewModel { Title = "Plot2" } });
             App.AttachDevTools(this);
         }
 
@@ -34,4 +34,6 @@ namespace AvaloniaExamples.Examples.UserControlDemo
 
         public IList<ViewModel> Models { get; set; }
     }
+
+    internal record Context2(List<ViewModel> Models);
 }
