@@ -7,7 +7,8 @@
         xmlns:exampleBrowser="clr-namespace:ExampleBrowser;assembly=ExampleBrowser"
         xmlns:exampleLibrary="clr-namespace:ExampleLibrary;assembly=ExampleLibrary"
         x:Class="ExampleBrowser.MainWindow"
-        Title="Example Browser">
+        Title="Example Browser"
+        x:DataType="exampleBrowser:MainViewModel">
     <Window.DataContext>
       <exampleBrowser:MainViewModel />
     </Window.DataContext>
